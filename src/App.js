@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import bg from "./assets/images/background.png"
 
 function App() {
-  const enteredName = useRef();
+  const enteredName = useRef("");
   const [enteredEmail, setEnteredEmail] = useState('');
   const [emailIsValid, setEmailIsValid] = useState(true);
   const [enteredPassword1, setEnteredPassword1] = useState('');
@@ -132,7 +132,7 @@ function App() {
             <div class="field">
               <label class="label">Your full name</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Your full name" value={enteredName.current.value} ref={enteredName} required/>
+                <input class="input" type="text" placeholder="Your full name" ref={enteredName} required/>
               </div>
             </div>
             <div class="field">

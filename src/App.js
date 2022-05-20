@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom';
 
 import bg from "./assets/images/background.png"
 
+const regex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i;
+
 function App() {
   const enteredName = useRef("");
   const [enteredEmail, setEnteredEmail] = useState('');
@@ -49,7 +51,6 @@ function App() {
     setEnteredNumber(event.target.value);
   };
   const validateNumberHandler = () => {
-    const regex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i;
     setNumberIsValid(regex.test(enteredNumber));
   };
 
@@ -61,7 +62,11 @@ function App() {
       history.push("/dashboard")
     }
     else{
-      setPasswordMatch(false);
+      setPasswordMatch(enteredPassword1===enteredPassword2);
+      setNumberIsValid(regex.test(enteredNumber));
+      setPassword2IsValid(enteredPassword2.trim().length > 6);
+      setPassword1IsValid(enteredPassword1.trim().length > 6);
+      setEmailIsValid(enteredEmail.includes('@'));
     }
   };
 

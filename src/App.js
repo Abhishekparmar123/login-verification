@@ -132,7 +132,7 @@ function App() {
             <div class="field">
               <label class="label">Your full name</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Your full name" required/>
+                <input class="input" type="text" placeholder="Your full name" value={enteredName.current.value} ref={enteredName} required/>
               </div>
             </div>
             <div class="field">

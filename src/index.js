@@ -12,8 +12,8 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/dashboard" render={(props) => <Dashboard {...props} />} />
-      <Route path="/" render={(props) => <IndexView {...props} />} />
-      <Redirect from="*" to="/" />
+      <Route path="/index" render={(props) => <IndexView {...props} />} />
+      <Redirect from="*" to="/index" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

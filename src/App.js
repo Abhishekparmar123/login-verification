@@ -32,20 +32,20 @@ function App() {
     setEnteredPassword1(event.target.value);
   };
   const validatePassword1Handler = () => {
-    if(enteredPassword1.trim().length > 6 && enteredPassword2.trim().length > 6){
+    if(enteredPassword1.trim().length > 5 && enteredPassword2.trim().length > 5){
       setPasswordMatch(enteredPassword1===enteredPassword2);
     }
-    setPassword1IsValid(enteredPassword1.trim().length > 6);
+    setPassword1IsValid(enteredPassword1.trim().length > 5);
   };
 
   const password2ChangeHandler = (event) => {
     setEnteredPassword2(event.target.value);
   };
   const validatePassword2Handler = () => {
-    if(enteredPassword1.trim().length > 6 && enteredPassword2.trim().length > 6){
+    if(enteredPassword1.trim().length > 5 && enteredPassword2.trim().length > 5){
       setPasswordMatch(enteredPassword1===enteredPassword2);
     }
-    setPassword2IsValid(enteredPassword2.trim().length > 6);
+    setPassword2IsValid(enteredPassword2.trim().length > 5);
   };
   const numberChangeHandler = (event) => {
     setEnteredNumber(event.target.value);
@@ -64,8 +64,8 @@ function App() {
     else{
       setPasswordMatch(enteredPassword1===enteredPassword2);
       setNumberIsValid(regex.test(enteredNumber));
-      setPassword2IsValid(enteredPassword2.trim().length > 6);
-      setPassword1IsValid(enteredPassword1.trim().length > 6);
+      setPassword2IsValid(enteredPassword2.trim().length > 5);
+      setPassword1IsValid(enteredPassword1.trim().length > 5);
       setEmailIsValid(enteredEmail.includes('@'));
     }
   };

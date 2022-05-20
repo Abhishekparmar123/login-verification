@@ -86,7 +86,7 @@ function App() {
           </figure>
         </div>
         <div className='column px-0 is-flex column--height' >
-          <form class="box is-radiusless column--height" onSubmit={submitHandler}>
+          <form class="box is-radiusless column--height px-6" onSubmit={submitHandler}>
             <div class="field">
               <label class="label">Your email address</label>
               <div class="control">

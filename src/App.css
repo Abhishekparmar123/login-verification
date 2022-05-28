@@ -40,10 +40,111 @@
 .column__footer {
     position: relative;
     text-align: center;
-    bottom: 150px;
+    bottom: 120px;
 }
 
 .column--height {
     min-height: "100%";
     width: 100%;
+}
+
+.img--fluid {
+    width: 80%;
+    max-height: 600px;
+}
+
+.bg--blur {
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.input--width {
+    max-width: 400px !important
+}
+
+.input--phone {
+    max-width: 300px !important
+}
+
+.is-submit {
+    background-color: #33ADFF;
+    color: white;
+    font-weight: 600;
+    padding: 0px 25px;
+}
+
+.is-submit:hover {
+    background-color: white;
+    color: #33ADFF;
+    border: 2px solid #33ADFF;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0px;
+    padding: 5px;
+    font: inherit;
+    color: currentColor;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #33ADFF;
+    border-radius: 5px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #33ADFF;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+label {
+    color: #c1c7d1 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+
+p {
+    color: #b0b6c0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.form--policy {
+    font-size: 14px;
+    color: #474D5C;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.form--heading {
+    font-size: 25px !important;
+    color: #474D5C;
+    font-weight: bold;
+    margin-bottom: 20px;
 }

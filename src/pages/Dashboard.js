@@ -1,11 +1,11 @@
 import React from 'react'
-import BarChart from '../components/Barchart'
+import Chart from '../components/Barchart'
 
 function Dashboard() {
   return (
     <div className='container'>
       <div className='is-flex is-justify-content-center is-align-items-center div--height'>
-        <BarChart/>
+        <Chart/>
       </div>
     </div>
   )

@@ -39,7 +39,7 @@ const Chart = () => {
 		// Draw chart using the data and updated dimensions
 		DrawChart(sample,dimensions)
 
-	},[dimensions])
+	})
 
 	const margin = {top: 50, right:30, bottom: 30, left:60}
 

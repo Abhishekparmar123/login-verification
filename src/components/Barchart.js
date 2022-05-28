@@ -65,7 +65,7 @@ const Chart = () => {
 			.attr('transform', 'translate(0,'+ chartheight + ')')
 			.call(d3.axisBottom(x).tickFormat(i=>data[i].category).tickSizeOuter(0))
 
-		const max = d3.max(data, function(d){return d.quantity})
+		// const max = d3.max(data, function(d){return d.quantity})
 
 		// y scale
 		const y = d3.scaleLinear()
